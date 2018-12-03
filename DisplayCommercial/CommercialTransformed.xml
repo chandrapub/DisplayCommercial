@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:c="http://my.company.com">
+  <body>
+    <table border="1">
+      <tr>
+        <th>Company Name</th>
+        <th>Director</th>
+        <th>Webpage</th>
+      </tr>
+      <tr>
+        <td>Yensid Tlaw</td>
+        <td>June</td>
+        <td>www.myfantasy.com</td>
+      </tr>
+      <tr>
+        <td>Tinycomp</td>
+        <td></td>
+        <td>www.myhugo.com</td>
+      </tr>
+      <tr>
+        <td>Cartoons</td>
+        <td></td>
+        <td>www.lotsofcartoons.com</td>
+      </tr>
+      <tr>
+        <td>Web Developers</td>
+        <td></td>
+        <td>www.superstudents.com</td>
+      </tr>
+    </table>
+  </body>
+</html>
