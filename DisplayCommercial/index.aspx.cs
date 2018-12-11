@@ -17,18 +17,25 @@ namespace DisplayCommercial
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // If the XML uses a namespace, the XSLT must refer to this namespace
+            TransformXml();
+
+        }
+        public void TransformXml()
+        {
+
             string sourcefile = Server.MapPath("Commercial.xml");
             string xsltfile = Server.MapPath("Commercial.xslt");
             string destinationfile = Server.MapPath("CommercialTransformed.xml");
+            string xslthtmlfile = Server.MapPath("CommercialToHTML.xslt");
+            string destinationhtmlfile = Server.MapPath("CommercialTransformed.html");
 
-            FileStream fs = new FileStream(destinationfile, FileMode.Create);
-            XslCompiledTransform xct = new XslCompiledTransform();
-            xct.Load(xsltfile);
-            xct.Transform(sourcefile, null, fs);
-            fs.Close();
+            XMLCommercialClass xmlfile1 = new XMLCommercialClass(sourcefile, xsltfile, destinationfile);
+            xmlfile1.CreateToTransformXml();
 
+            HtmlCommercialClass htmlfile1 = new HtmlCommercialClass(sourcefile, xslthtmlfile, destinationhtmlfile);
+            htmlfile1.CreateToTransformHtml();
 
         }
+
     }
 }

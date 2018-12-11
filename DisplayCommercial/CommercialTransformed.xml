@@ -1,32 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:c="http://my.company.com">
-  <body>
-    <table border="1">
-      <tr>
-        <th>Company Name</th>
-        <th>Director</th>
-        <th>Webpage</th>
-      </tr>
-      <tr>
-        <td>Yensid Tlaw</td>
-        <td>June</td>
-        <td>www.myfantasy.com</td>
-      </tr>
-      <tr>
-        <td>Tinycomp</td>
-        <td></td>
-        <td>www.myhugo.com</td>
-      </tr>
-      <tr>
-        <td>Cartoons</td>
-        <td></td>
-        <td>www.lotsofcartoons.com</td>
-      </tr>
-      <tr>
-        <td>Web Developers</td>
-        <td></td>
-        <td>www.superstudents.com</td>
-      </tr>
-    </table>
-  </body>
-</html>
+<companyInfo xmlns:c="http://my.company.com">
+  <companyName>Yensid Tlaw</companyName>
+  <website>www.myfantasy.com</website>
+  <Address>Yeti Street 48<br />DowntownFarawayland</Address>
+  <Telephone>(111) 22222222</Telephone>
+  <CompanyLogo>logo1.jpg</CompanyLogo>
+  <companyName>Tinycomp</companyName>
+  <website>www.myhugo.com</website>
+  <Address><br /></Address>
+  <Telephone></Telephone>
+  <CompanyLogo></CompanyLogo>
+  <companyName>Cartoons</companyName>
+  <website>www.lotsofcartoons.com</website>
+  <Address>Champs Elysees<br />Holte, Denmark</Address>
+  <Telephone>55+ 66666666</Telephone>
+  <CompanyLogo>logo3.jpg</CompanyLogo>
+  <companyName>Web Developers</companyName>
+  <website>www.superstudents.com</website>
+  <Address><br /></Address>
+  <Telephone></Telephone>
+  <CompanyLogo>logo4.jpg</CompanyLogo>
+</companyInfo>

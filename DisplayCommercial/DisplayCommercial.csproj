@@ -70,6 +70,10 @@
     <Content Include="Commercial.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="CommercialToHTML.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="CommercialTransformed.html" />
     <Content Include="index.aspx" />
     <Content Include="Web.config" />
     <Content Include="Commercial.xslt">
@@ -85,6 +89,7 @@
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XMLCommercialClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -94,6 +99,10 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="logo\" />
+    <Folder Include="Pictures\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

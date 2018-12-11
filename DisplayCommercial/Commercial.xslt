@@ -5,31 +5,36 @@
   <xsl:output method="xml" indent="yes"/>
   <xsl:template match="c:commercials">
 
-    <!--<xsl:template match="/collection">-->
-      <html>
-        <body>
-          <table border="1">
-            <tr>
-              <th>Company Name</th>
-              <th>Director</th>
-              <th>Webpage</th>
-            </tr>
-            <xsl:for-each select="c:commercial">
-              <tr>
-                <td>
-                  <xsl:value-of select="@company"/>
-                </td>
-                <td>
-                  <xsl:value-of select="c:director"/>
-                </td>
-                <td>
-                  <xsl:value-of select="c:webpage"/>
-                </td>
-              </tr>
-            </xsl:for-each>
-          </table>
-        </body>
-      </html>
-    </xsl:template>
-  </xsl:stylesheet>
-    
+    <companyInfo>
+      <xsl:apply-templates select="c:commercial"/>
+    </companyInfo>
+  </xsl:template>
+
+  <xsl:template match="c:commercial">
+    <companyName>
+      <xsl:value-of select="@company"/>
+    </companyName>
+
+    <website>
+      <xsl:value-of select="c:webpage"/>
+    </website>
+
+    <Address>
+      <xsl:value-of select="c:address/c:streetandno"/>
+      <br/>
+      <xsl:value-of select="c:address/c:town"/>
+      <xsl:value-of select="c:address/c:country"/>
+    </Address>
+
+    <Telephone>
+      <xsl:value-of select="c:telephone"/>
+    </Telephone>
+
+    <CompanyLogo>
+      <xsl:value-of select="c:logo"/>
+    </CompanyLogo>
+
+
+  </xsl:template>
+</xsl:stylesheet>
+

@@ -12,7 +12,11 @@
             <asp:Label ID="LabelTitle" runat="server" Text="Commercial information"></asp:Label>
             <br />
             <br />
-            <asp:Xml ID="XmlCommercial" runat="server" DocumentSource="~/Commercial.xml" TransformSource="~/Commercial.xslt"></asp:Xml>
+            <asp:Xml ID="XmlCommercial" runat="server" DocumentSource="~/Commercial.xml" TransformSource="~/CommercialToHTML.xslt"></asp:Xml>
+            <br />
+            <br />
+            <br />
+            <asp:Xml ID="Xml1" runat="server" DocumentSource="~/Commercial.xml" TransformSource="~/CommercialToHTML.xslt"></asp:Xml>
         </div>
     </form>
 </body>
