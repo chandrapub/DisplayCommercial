@@ -6,22 +6,27 @@
   <xsl:template match="c:commercials">
 
     <companyInfo>
-      <xsl:apply-templates select="c:commercial"/>
+      <xsl:apply-templates select="//c:commercial"/>
     </companyInfo>
   </xsl:template>
 
   <xsl:template match="c:commercial">
-    <companyName>
+    
+    <xsl:variable name="count" select="position()" />
+    <commercial class="ComId" id="{$count}">
+    
+    
+    <CompanyName>
       <xsl:value-of select="@company"/>
-    </companyName>
+    </CompanyName>
 
-    <website>
+    <Website>
       <xsl:value-of select="c:webpage"/>
-    </website>
+    </Website>
 
     <Address>
       <xsl:value-of select="c:address/c:streetandno"/>
-      <br/>
+      <!--<br/>-->
       <xsl:value-of select="c:address/c:town"/>
       <xsl:value-of select="c:address/c:country"/>
     </Address>
@@ -33,6 +38,7 @@
     <CompanyLogo>
       <xsl:value-of select="c:logo"/>
     </CompanyLogo>
+    </commercial>
 
 
   </xsl:template>

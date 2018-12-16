@@ -1,0 +1,6 @@
+﻿Search for movie by name 1
+Show movies in selected category 2 
+Display movie info like: poster, year, description, actors, child rating, etc. 3
+Show top displayed movies 4
+Show random commercials 5
+
